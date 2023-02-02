@@ -1,4 +1,4 @@
-name: teste
+name: fiec
 channels:
   - anaconda
   - conda-forge
