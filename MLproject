@@ -1,0 +1,16 @@
+name: fiec2
+conda_env: environment.yml
+
+entry_points:
+    main:
+        parameters:
+            data_path: {type: path, default: ./jena_climate_2009_2016.csv}
+
+            min_samples_split: {type: float, default: 4} #integer values
+            min_samples_leaf: {type: float, default: 1} #integer values
+            bootstrap: {type: string, default: False} #boolean values
+            max_features: {type: float, default: 0.25} #string or float values
+            n_estimators: {type: float, default: 200} #integer values
+            n_jobs: {type: float, default: 5} #integer values
+            criterion: {type: string, default: 'friedman_mse'} #string values
+        command: python main.py {data_path} {min_samples_split} {min_samples_leaf} {bootstrap} {max_features} {n_estimators} {criterion} {n_jobs}
